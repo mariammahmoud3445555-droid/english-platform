@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="miada.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo" onclick="window.location.href='dashboard.html'">
+            English Platform
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="toggleDarkMode()" class="nav-icon">
+                🌙
+            </button>
+
+            <button onclick="showNotifications()" class="nav-icon">
+                🔔
+            </button>
+
+            <button onclick="openPage('profile.html')">
+                👤 Profile
+            </button>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+            <button onclick="openPage('courses.html')">
+                View Courses
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <div id="welcomePopup" class="popup-overlay">
+
+        <div class="welcome-popup">
+
+            <div class="welcome-icon">
+                🎓
+            </div>
+
+            <h2>Welcome to English Platform!</h2>
+
+            <p>
+                We're happy to have you here.
+                Start your English learning journey today!
+            </p>
+
+            <button onclick="closeWelcome()">
+                Get Started 🚀
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="notifications" class="notifications">
+
+        <h3>🔔 Notifications</h3>
+
+        <p>No new notifications.</p>
+
+        <small>You're all caught up! ✓</small>
+
+    </div>
+
+
+    <main>
+
+        <h1>
+            Welcome, <span id="studentName"></span>! 👋
+        </h1>
+
+        <p class="subtitle">
+            Ready to improve your English today?
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search courses, lessons..."
+                onkeyup="searchCourses()"
+            >
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h2>📚</h2>
+                <h3>Courses</h3>
+                <p>0</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>📝</h2>
+                <h3>Quizzes</h3>
+                <p>0</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🏆</h2>
+                <h3>Points</h3>
+                <p>0</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>📊</h2>
+                <h3>Progress</h3>
+                <p>0%</p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-cards">
+
+            <div class="feature-card">
+
+                <h2>📚 My Courses</h2>
+
+                <p>
+                    Explore your English courses.
+                </p>
+
+                <button onclick="window.location.href='courses.html'">
+                    View Courses
+                </button>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h2>📝 Quizzes</h2>
+
+                <p>
+                    Test your English skills.
+                </p>
+
+                <button onclick="alert('No quizzes available yet!')">
+                    View Quizzes
+                </button>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h2>📊 My Progress</h2>
+
+                <p>
+                    Track your learning progress.
+                </p>
+
+                <button onclick="alert('You have not started any courses yet.')">
+                    View Progress
+                </button>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h2>💬 Contact Teacher</h2>
+
+                <p>
+                    Send a message to Mr. Abdelrahman Ahmed.
+                </p>
+
+                <button onclick="contactTeacher()">
+                    Contact Teacher
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <div id="loadingScreen" class="loading-screen">
+
+        <div class="loader"></div>
+
+        <p>Loading...</p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+          </html>
