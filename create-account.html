@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="miada.css">
+</head>
+
+<body>
+
+    <h1>Create Your Account</h1>
+
+    <div class="card">
+
+        <h2>Join the Platform</h2>
+
+        <form onsubmit="createAccount(event)">
+
+            <p>
+                <b>Full Name</b>
+            </p>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <p>
+                <b>Email</b>
+            </p>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <p>
+                <b>Phone Number</b>
+            </p>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone"
+                required
+            >
+
+            <p>
+                <b>Password</b>
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                required
+            >
+
+            <p>
+                <b>Confirm Password</b>
+            </p>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                required
+            >
+
+            <br>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
